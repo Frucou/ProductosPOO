@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos </title>
+    <link rel="shortcut icon" href="#">
+    <script defer type="module" src="js/app.js"></script>
+</head>
+
+<body>
+    <section id="header">
+        <header>
+            <h1>
+                Productos
+            </h1>
+        </header>
+    </section>
+    <section>
+        <div id="content">
+            <p id="enunciado">
+                Los productos tienen los siguientes atributos, <strong>Nombre </strong>
+                y <strong>Precio</strong> y se caracterizan por dos tipos de producto:
+                <strong>Perecedero</strong> y <strong>NoPerecedero</strong>.
+            </p>
+            <p>
+                Crear sus contructores, getters, setters, toString y la función calcular
+                a esta función le pasaremos un número siendo la cantidad de productos.
+            </p>
+            <ul>
+                <li>
+                    En Producto, simplemente seria multiplicar el precio por la cantidad de productos pasados.
+                </li>
+                <li>
+                    En Perecedero, aparte de lo que hace producto, el precio se reducirá según los días a caducar:
+                    <ul>
+                        <li>
+                            Si le queda 1 día para caducar, se reducirá 4 veces el precio final.
+                        </li>
+                        <li>
+                            Si le quedan 2 días para caducar, se reducirá 3 veces el precio final.
+                        </li>
+                        <li>
+                            Si le quedan 3 días para caducar, se reducirá a la mitad desu precio final.
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    En NoPerecedero, hace lo mismo que en producto.
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section>
+        <div id="grid">
+            <form id="myForm">
+                <div class="formm">
+                    <label for="nombre">Nombre: </label>
+                    <input required id="nombre" type="text">
+                </div>
+                <div class="formm">
+                    <label for="precio">Precio: </label>
+                    <input required id="precio" type="number">
+                </div>
+                <div class="formm">
+                    <ul>
+                        <li>
+                            <label for="caduco">Tipo producto: </label>
+                            <select name="caduco" class="input" id="caduco">
+                                <option value="perecedero" selected>Perecedero</option>
+                                <option value="noperecedero">No perecedero</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="valor-tipo">Fecha de caducidad: </label>
+                            <input id="valor-tipo" type="text" name="valor-tipo">
+                        </li>
+                    </ul>
+                </div>
+                <div class="btn">
+                    <button id="button" class="btn--1">Guardar</button>
+                    <input class="btn--2" type="button" value="Calcular">
+                    <span class="total"></span>
+                </div>
+            </form>
+            <section class="section_out">
+                <h1>Productos</h1>
+                <div class="output"></div>
+            </section>
+        </div>
+
+    </section>
+</body>
+
+</html>
